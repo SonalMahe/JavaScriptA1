@@ -2,7 +2,7 @@
 
 console.log("Hello World");
 alert("Welcome to JavaScript World");
-prompt("welcome back")
+prompt("welcome back");
 
 //this is exercise 2
 let fullName= "Sonal Maheshwari";
@@ -13,6 +13,10 @@ console.log(`my age is: ${age}`);
 
 let favfruit ="apple";
 console.log(`My favourite fruit is: ${favfruit}`);
+
+let color= "red";
+console.log(`My fav color is: ${color}`)
+console.log(typeof color);
 
 
 //this is exercise 3
@@ -36,11 +40,11 @@ let students= 10;
 
 let price= 500;
 price =price + 40;
-console.log(`the total price is: ${price}`);
+console.log(`The total price is: ${price}`);
 
 let CGPA=8.2;
 CGPA -= 2;
-console.log(`The CGPA of Max is :${CGPA}`);
+console.log(`The CGPA of Max is: ${CGPA}`);
 
 let bankno= 78908;
 bankno = bankno * 3;
@@ -49,5 +53,5 @@ console.log(`The banknumber is: ${bankno}`);
 let rating= 5;
 rating ++;
 //rating --;
-console.log(`the rating of show is :${rating}`);
+console.log(`The rating of show is: ${rating}`);
  
