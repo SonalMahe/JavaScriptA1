@@ -9,7 +9,7 @@ let fullName= "Sonal Maheshwari";
 console.log(`My name is: ${fullName}`);
 
 let age= 30;
-console.log(`my age is: ${age}`);
+console.log(`My age is: ${age}`);
 
 let favfruit ="apple";
 console.log(`My favourite fruit is: ${favfruit}`);
