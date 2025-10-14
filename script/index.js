@@ -25,33 +25,21 @@ let students= 10;
  console.log(students);
  console.log(typeof students);
 
- //students = students + 1;
- //students = students - 2;
-// students = students * 2;
-// students = students / 2;
-
-//another way -
-//students += 1;
-//students -= 5;
-//students *= 4;
-//students /= 2;
-//console.log(students);
+let x= 500;
+let y= 100;
+console.log( x + y); 
+console.log(x - y); 
+console.log(x * y);
+console.log(x / y);
 
 
-let price= 500;
-price =price + 40;
-console.log(`The total price is: ${price}`);
+//this is extra one, IS this correct way ?
+let CGPA= 8.2;
+let z= 1;
+console.log(`The CGPA of Max is: ${CGPA - z}`);
 
-let CGPA=8.2;
-CGPA -= 2;
-console.log(`The CGPA of Max is: ${CGPA}`);
+let bankAmt= 78908;
+ let amount = 300;
+console.log(`The banknumber is: ${bankAmt + amount}`);
 
-let bankno= 78908;
-bankno = bankno * 3;
-console.log(`The banknumber is: ${bankno}`);
-
-let rating= 5;
-rating ++;
-//rating --;
-console.log(`The rating of show is: ${rating}`);
  
