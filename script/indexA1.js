@@ -1,6 +1,6 @@
-//this is exercise1
+/*//this is exercise1
 
-console.log("Hello World");
+//console.log("Hello World");
 alert("Welcome to JavaScript World");
 prompt("welcome back");
 
@@ -40,6 +40,6 @@ console.log(`The CGPA of Max is: ${CGPA - z}`);
 
 let bankAmt= 78908;
  let amount = 300;
-console.log(`The banknumber is: ${bankAmt + amount}`);
+console.log(`The banknumber is: ${bankAmt + amount}`); */
 
  
