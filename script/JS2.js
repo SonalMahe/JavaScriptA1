@@ -3,7 +3,7 @@
 
  let priceInNumber = parseInt(price);
 
- let percentReduce = priceInNumber* 0.1;
+ let percentReduce = priceInNumber * 0.1;
 
  let finalPrice = priceInNumber - percentReduce;
 
