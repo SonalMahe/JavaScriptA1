@@ -1,5 +1,5 @@
-//exercise 1
-function getRandomNumber(min, max) {
+//exercise 1 try two ways- 
+/*function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
@@ -18,5 +18,14 @@ do {
     }
 }
 //continue the loop until userInput number matches the random number.
-while (userInput !== randomNumber);
+while (userInput !== randomNumber);*/
  
+
+let gameNum= 3;
+let userNum= prompt("Guess the number between 1 to 10");
+
+while(userNum != gameNum){
+    userNum= prompt("You entered wrong number,Guess again");
+}
+
+console.log("Congratulations ,you entered right number");

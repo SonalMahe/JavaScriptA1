@@ -1,4 +1,4 @@
-//exercise 1
+//exercise 2
 function generateRandomArray(length) {
 
     const randomArray = [];
