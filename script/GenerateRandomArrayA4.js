@@ -11,7 +11,6 @@ function generateRandomArray(length) {
     }
     return randomArray;
 }
-
  const userInput = prompt("Enter the length of the array");
 
 // convert to number
