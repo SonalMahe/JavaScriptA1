@@ -7,17 +7,17 @@ const account = {
         console.log(`The total balance in your account is: ${this.balance}`);
     },
     deposit(amount) {
-        if (amount > 0) {
+        if (amount > 0 && !isNaN(amount)) {
             this.balance += amount;
             console.log(`You have deposited : ${amount}`);
             this.getBalance();
         }
-        else {
-            this.accountError("Amount was less than zero or invalid amount");
+        else  {
+            this.accountError("Invalid amount");
         }
     },
     withdraw(withdrawAmount) {
-        if (withdrawAmount > 0 && withdrawAmount < this.balance) {
+        if (withdrawAmount > 0 && withdrawAmount < this.balance && !isNaN(withdrawAmount)) {
             this.balance -= withdrawAmount;
             console.log(`You have withdrawn ${withdrawAmount}`);
             this.getBalance();
@@ -71,7 +71,7 @@ function atm() {
                 account.withdraw(parseFloat(withdrawAmt));
                 break;
             case 4:
-                account.getAccountName();              
+                account.getAccountName();
                 break;
             case 5:
                 account.exit();
