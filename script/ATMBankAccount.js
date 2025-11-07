@@ -8,7 +8,7 @@ const account = {
     },
     deposit(amount) {
         if (amount > 0 && !isNaN(amount)) {
-            this.balance += amount;
+            this.balance += amount; 
             console.log(`You have deposited : ${amount}`);
             this.getBalance();
         }
