@@ -18,19 +18,19 @@ const library = {
          { title:"MyBook4", author:"4", isRead: false}
      ], */
     addBook(title, author) {
-        const newBook = new Book(title, author, false);
+        const newBook = new Book(title, author);
         this.books.push(newBook);
-        console.log(newBook);
+        console.log( `Book title: ${newBook.title} and Book author: ${newBook.author}`);
     },
     listBooks() {
         this.books.forEach((item) => {
             console.log(
-                `Book title: ${item.title}  and Book author: ${item.author}`
+                 `Book title: ${item.title} and Book author: ${item.author} and read status : ${item.isRead ? "Read": "Unread"}`
             );
         });
     },
     markAsRead(title) {
-        const book = this.books.find(item => item.title === title);
+        const book = this.books.find(item => item.title.toUpperCase() === title.toUpperCase());
         if (book) {
             book.isRead = true;
             this.confirmMessage(`Book with title: "${title}" marked as read.`);
@@ -39,7 +39,7 @@ const library = {
         }
     },
     removeBook(title) {
-        const book = this.books.find(item => item.title === title)
+        const book = this.books.find(item => item.title.toUpperCase() === title.toUpperCase())
         if (book) {
             this.books = this.books.filter(item => item.title !== title);
             library.confirmMessage(`Book with title "${title}" removed from the library.`);
@@ -77,7 +77,7 @@ function bookTracker() {
     let active = true;
     while (active) {
         const userChoice = prompt(`
-                Book Tracker
+       Welcome User here is Book Tracker Records-
             1.) Add Book
             2.) List Books
             3.) Mark Book as Read
@@ -92,8 +92,8 @@ function bookTracker() {
             case "1":
                 const titleInput = prompt("Enter the title of the book which you want to add");
                 const authorName = prompt("Enter the author name of the book which you want to add");
-                library.addBook(titleInput, authorName);
                 library.confirmMessage("New book is added");
+                library.addBook(titleInput, authorName);
                 break;
             case "2":
                 library.listBooks();
