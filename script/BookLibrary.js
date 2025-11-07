@@ -10,7 +10,7 @@ const library = {
         new Book("The Witches", "Roald Dahl", false),
         new Book("The Secret Garden", "Frances Hodgson", true)
     ],
-    
+
     /* bookTest : [
          { title:"MyBook", author:"1", isRead: false},
          { title:"MyBook2", author:"2", isRead: false},
@@ -20,12 +20,12 @@ const library = {
     addBook(title, author) {
         const newBook = new Book(title, author);
         this.books.push(newBook);
-        console.log( `Book title: ${newBook.title} and Book author: ${newBook.author}`);
+        console.log(`Book title: ${newBook.title} and Book author: ${newBook.author}`);
     },
     listBooks() {
         this.books.forEach((item) => {
             console.log(
-                 `Book title: ${item.title} and Book author: ${item.author} and read status : ${item.isRead ? "Read": "Unread"}`
+                `Book title: ${item.title} and Book author: ${item.author} and read status: ${item.isRead ? "Read" : "Unread"}`
             );
         });
     },
@@ -42,7 +42,7 @@ const library = {
         const book = this.books.find(item => item.title.toUpperCase() === title.toUpperCase())
         if (book) {
             this.books = this.books.filter(item => item.title !== title);
-            library.confirmMessage(`Book with title "${title}" removed from the library.`);
+            this.confirmMessage(`Book with title "${title}" removed from the library.`);
         }
         else {
             this.error(`Book with title "${title}" not found in library.`);
@@ -54,20 +54,19 @@ const library = {
             this.confirmMessage("No book is available to read!");
         } else {
             unread.forEach(book => {
-                console.log(`Unread -> Title: ${book.title}, Author: ${book.author}`);
+                console.log(`Unread - Title: ${book.title}, Author: ${book.author}`);
             });
         }
-
     },
     confirmMessage(message) {
-        console.log(`Action successful ->: ${message}`);
+        console.log(`Records Status: ${message}`);
     },
     error(message) {
-        console.log(`Action was not succesful because of ->: ${message}`);
+        console.log(`Error occured: ${message}`);
     }
 }
 
-function Book(title, author, isRead) {
+function Book(title, author, isRead = false) {
     this.title = title;
     this.author = author;
     this.isRead = isRead;
